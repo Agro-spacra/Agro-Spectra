@@ -1,3 +1,5 @@
+> 🎨 **[رابط العرض التقديمي المرئي على Canva](https://canva.link/fkzgx3r42gcmkaq)**
+
 # AgroSpectra | Remote-Sensing Platform Presentation
 **NASA Space Apps Challenge 2026**  
 *"From Satellite Orbit to the Farmer's Field: Securing Tomorrow's Food Today"*
