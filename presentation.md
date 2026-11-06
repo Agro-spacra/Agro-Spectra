@@ -49,8 +49,16 @@ An intelligent platform converting open NASA satellite observations into actiona
 - **Data Pipeline:** Automated ingestion of NASA Earth Science APIs.
 
 ---
+### 7.🖥️ Smart Multilayer Risk Detection & Early Warning System
+* **Dynamic NASA Integration:** Real-time retrieval of meteorological metrics (`NASA POWER API`) covering temperature, precipitation, and relative humidity.
+* **Comprehensive Agro-Risk Engine:** Automated evaluation covering 4 major environmental stresses:
+  * 🔴 **Extreme Heat & Fire Risk:** Mitigating high-temperature and low-humidity hazards.
+  * 🟣 **Flood & Excess Water Warning:** Tracking heavy precipitation spikes.
+  * 🟡 **Drought & Water Scarcity Alert:** Identifying critical dry spells.
+  * 🟠 **High Pest & Fungal Proliferation Risk:** Detecting optimal incubator conditions (warm temperatures 20–30°C paired with high humidity >75%) to protect crop yields proactively.
+* **Actionable Output:** Instant generation of field analysis reports (`agrospectra_field_analysis.csv`) to guide immediate farmer response.
 
-## 7. Future Vision & Conclusion
+## 8. Future Vision & Conclusion
 - **Turning Space Data into Earthly Harvest.**
 - Open for Questions & Discussion.
 - **Project:** AgroSpectra
