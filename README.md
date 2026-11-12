@@ -38,7 +38,9 @@ pip install -r requirements.txt
 3. **Run the Main Script:**
 python main.py
 ## 👥 Team & Event
-* **Developer & Creator:** Manar (أ. منار)
+- **Presentation Deck:** [View AgroSpectra Pitch Deck (Google Slides)](https://docs.google.com/presentation/d/1KjVZqDeXNTUZfEX0sWxUCqfIN2SFE_fwu4GRJHv_X0M/edit?usp=drivesdk)
+
+* **Developer & Creator:** Manar 
 * **Event:** NASA Space Apps Challenge 2026
 * **Project Focus:** Remote Sensing, Water Security, and Sustainable Agriculture (Saudi Vision 2030 Aligned)
 * **Direct Links:** [GitHub Repository](https://github.com/Agro-spacra/AgroSpectra)
