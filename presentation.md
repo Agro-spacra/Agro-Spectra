@@ -1,4 +1,5 @@
-> 🎨 **[رابط العرض التقديمي المرئي على Canva](https://canva.link/fkzgx3r42gcmkaq)**
+
+- **Presentation Deck:** [View AgroSpectra Pitch Deck (Google Slides)](https://docs.google.com/presentation/d/1KjVZqDeXNTUZfEX0sWxUCqfIN2SFE_fwu4GRJHv_X0M/edit?usp=drivesdk)
 
 # AgroSpectra | Remote-Sensing Platform Presentation
 **NASA Space Apps Challenge 2026**  
