@@ -27,54 +27,58 @@
     <header class="flex justify-between items-center mb-6 bg-gray-900/80 p-3 rounded-2xl border border-emerald-500/30">
         <div class="flex items-center gap-2">
             <span class="bg-emerald-500 text-black font-bold px-2 py-1 rounded-lg text-xs">AS</span>
-            <span class="text-xs text-gray-400">فريق رقم 8 | تحدي ناسا جازان 2026</span>
+            <span id="teamBadgeText" class="text-xs text-gray-400">فريق رقم 8 | تحدي ناسا جازان 2026</span>
         </div>
-        <div class="bg-emerald-950/60 border border-emerald-500/50 px-3 py-1 rounded-full flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-xs text-emerald-300 font-medium">NASA POWER API متصل</span>
+        <div class="flex items-center gap-2">
+            <!-- زر تبديل اللغات -->
+            <button id="langToggleBtn" onclick="toggleLanguage()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-2.5 py-1 rounded-lg text-xs cursor-pointer transition">
+                🌐 EN
+            </button>
+            <div class="bg-emerald-950/60 border border-emerald-500/50 px-2.5 py-1 rounded-full flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="apiStatusText" class="text-xs text-emerald-300 font-medium">NASA POWER API متصل</span>
+            </div>
         </div>
     </header>
 
     <!-- المؤشرات العامة -->
     <section class="space-y-4 mb-6">
         <div class="bg-gray-900/60 border border-gray-800 p-4 rounded-2xl">
-            <p class="text-xs text-gray-400 mb-1">الحالة العامة للحقل</p>
-            <h2 class="text-xl font-bold text-emerald-400">الحالة المثالية (Optimal)</h2>
-            <p class="text-xs text-gray-500 mt-1">كفاءة النمو والتمثيل الضوئي في ذروتها</p>
+            <p id="sectionGeneralState" class="text-xs text-gray-400 mb-1">الحالة العامة للحقل</p>
+            <h2 id="optimalStateText" class="text-xl font-bold text-emerald-400">الحالة المثالية (Optimal)</h2>
+            <p id="optimalDescText" class="text-xs text-gray-500 mt-1">كفاءة النمو والتمثيل الضوئي في ذروتها</p>
         </div>
 
         <div class="bg-gray-900/60 border border-gray-800 p-4 rounded-2xl">
-            <p class="text-xs text-gray-400 mb-1">رطوبة التربة الحالية</p>
-<h2 id="moisture-val" class="text-xl font-bold text-cyan-400">جاري التحميل...</h2>
-
-            <p class="text-xs text-gray-500 mt-1">ضمن النطاق الآمن لامتصاص الجذور</p>
+            <p id="soilMoistureTitle" class="text-xs text-gray-400 mb-1">رطوبة التربة الحالية</p>
+            <h2 id="moisture-val" class="text-xl font-bold text-cyan-400">جاري التحميل...</h2>
+            <p id="soilMoistureDesc" class="text-xs text-gray-500 mt-1">ضمن النطاق الآمن لامتصاص الجذور</p>
         </div>
 
         <div class="bg-gray-900/60 border border-gray-800 p-4 rounded-2xl">
-            <p class="text-xs text-gray-400 mb-1">درجة حرارة التربة</p>
-<h2 id="temp-val" class="text-xl font-bold text-amber-400">جاري التحميل...</h2>
-
-            <p class="text-xs text-gray-500 mt-1">تحت المراقبة المستمرة للإجهاد</p>
+            <p id="soilTempTitle" class="text-xs text-gray-400 mb-1">درجة حرارة التربة</p>
+            <h2 id="temp-val" class="text-xl font-bold text-amber-400">جاري التحميل...</h2>
+            <p id="soilTempDesc" class="text-xs text-gray-500 mt-1">تحت المراقبة المستمرة للإجهاد</p>
         </div>
 
         <div class="bg-gray-900/60 border border-gray-800 p-4 rounded-2xl">
-            <p class="text-xs text-gray-400 mb-1">مؤشر الغطاء النباتي (NDVI)</p>
-            <h2 class="text-xl font-bold text-purple-400">0.78 (ممتاز)</h2>
-            <p class="text-xs text-gray-500 mt-1">بناءً على بيانات الأقمار الصناعية</p>
+            <p id="ndviTitle" class="text-xs text-gray-400 mb-1">مؤشر الغطاء النباتي (NDVI)</p>
+            <h2 id="ndviVal" class="text-xl font-bold text-purple-400">0.78 (ممتاز)</h2>
+            <p id="ndviDesc" class="text-xs text-gray-500 mt-1">بناءً على بيانات الأقمار الصناعية</p>
         </div>
     </section>
 
     <!-- نظام الكشف الذكي -->
     <section class="space-y-3">
-        <h3 class="text-sm font-bold text-gray-300 mb-2">نظام الكشف الذكي متعدد الطبقات للمخاطر</h3>
-        
+        <h3 id="riskSystemTitle" class="text-sm font-bold text-gray-300 mb-2">نظام الكشف الذكي متعدد الطبقات للمخاطر</h3>
+
         <!-- بطاقة خطر 1 -->
         <div class="hazard-card bg-gray-900/80 border-l-4 border-rose-500 p-4 rounded-xl shadow-md">
             <div class="flex justify-between items-center mb-1">
-                <h4 class="font-bold text-rose-400 text-sm">Extreme Heat & Fire Risk 🔥</h4>
-                <span class="text-[10px] bg-rose-950 text-rose-300 px-2 py-0.5 rounded">مراقب</span>
+                <h4 id="riskAlertText" class="font-bold text-rose-400 text-sm">Extreme Heat & Fire Risk 🔥</h4>
+                <span id="riskBadgeText" class="text-[10px] bg-rose-950 text-rose-300 px-2 py-0.5 rounded">مراقب</span>
             </div>
-            <p class="text-xs text-gray-400">التخفيف من مخاطر درجات الحرارة المرتفعة والرطوبة المنخفضة بيئياً للحقول المجاورة.</p>
+            <p id="riskDescText" class="text-xs text-gray-400">التخفيف من مخاطر درجات الحرارة المرتفعة والرطوبة المنخفضة بيئياً للحقول المجاورة.</p>
         </div>
 
         <!-- بطاقة خطر 2 -->
@@ -110,37 +114,74 @@
         Agro-Spectra Platform © 2026 | NASA Space Apps Challenge - جازان
     </footer>
 
-    <!-- سكريبت التفاعل اللحظي -->
+    <!-- استدعاء ملف القاموس اللغوي i18n.js -->
+    <script src="i18n.js"></script>
+
+    <!-- سكريبت التفاعل اللحظي وتبديل اللغات -->
     <script>
+        // الحالة الافتراضية للغة
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            
+            // تحديث نص زر التبديل
+            document.getElementById('langToggleBtn').innerText = currentLang === 'ar' ? '🌐 EN' : '🌐 عربي';
+
+            // تطبيق الترجمات من i18n.js بناءً على الـ IDs
+            document.getElementById('teamBadgeText').innerText = translations[currentLang].teamBadge;
+            document.getElementById('apiStatusText').innerText = translations[currentLang].apiConnected;
+            document.getElementById('sectionGeneralState').innerText = translations[currentLang].sectionGeneralState;
+            document.getElementById('optimalStateText').innerText = translations[currentLang].optimalState;
+            document.getElementById('optimalDescText').innerText = translations[currentLang].optimalDesc;
+            
+            document.getElementById('soilMoistureTitle').innerText = translations[currentLang].soilMoistureTitle;
+            document.getElementById('soilMoistureDesc').innerText = translations[currentLang].soilMoistureDesc;
+            
+            document.getElementById('soilTempTitle').innerText = translations[currentLang].soilTempTitle;
+            document.getElementById('soilTempDesc').innerText = translations[currentLang].soilTempDesc;
+            
+            document.getElementById('ndviTitle').innerText = translations[currentLang].ndviTitle;
+            document.getElementById('ndviVal').innerText = translations[currentLang].ndviValue;
+            document.getElementById('ndviDesc').innerText = translations[currentLang].ndviDesc;
+            
+            document.getElementById('riskSystemTitle').innerText = translations[currentLang].riskSystemTitle;
+            document.getElementById('riskBadgeText').innerText = translations[currentLang].riskBadge;
+            document.getElementById('riskAlertText').innerText = translations[currentLang].riskAlert;
+            document.getElementById('riskDescText').innerText, document.getElementById('riskDescText').innerText = translations[currentLang].riskDesc;
+
+            // عكس اتجاه الصفحة تلقائياً (RTL للعروبي، LTR للإنكليزي)
+            document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+            document.documentElement.setAttribute('lang', currentLang);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const hazardCards = document.querySelectorAll('.hazard-card');
-            
+
             hazardCards.forEach(card => {
                 card.addEventListener('click', function() {
-                    // تأثير نبض بصري عند الضغط
                     this.style.transform = 'scale(0.97)';
                     setTimeout(() => {
                         this.style.transform = 'scale(1)';
                     }, 150);
 
-                    // استخراج عنوان المؤشر وإظهار تفاصيل فورية
                     const title = this.querySelector('h4').innerText;
                     alert("تحليل نظام Agro-Spectra الذكي:\nتم تفعيل فحص الحساسات لـ (" + title + ") بناءً على آخر تحديث لبيانات ناسا الإحيائية.");
                 });
             });
         });
     </script>
-<script>
-  fetch('agro_data_output.json')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('moisture-val').innerText = data.evaluated_moisture;
-      document.getElementById('temp-val').innerText = data.evaluated_temperature;
-    })
-.catch(error => console.error('Error fetching JSON data:', error));
 
-
-</script>
+    <!-- جلب بيانات ناسا الحية -->
+    <script>
+      fetch('agro_data_output.json')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('moisture-val').innerText = data.evaluated_moisture;
+          document.getElementById('temp-val').innerText = data.evaluated_temperature;
+        })
+        .catch(error => console.error('Error fetching JSON data:', error));
+    </script>
 
 </body>
 </html>
