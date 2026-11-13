@@ -30,7 +30,6 @@
             <span id="teamBadgeText" class="text-xs text-gray-400">فريق رقم 8 | تحدي ناسا جازان 2026</span>
         </div>
         <div class="flex items-center gap-2">
-            <!-- زر تبديل اللغات -->
             <button id="langToggleBtn" onclick="toggleLanguage()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-2.5 py-1 rounded-lg text-xs cursor-pointer transition">
                 🌐 EN
             </button>
@@ -75,37 +74,37 @@
         <!-- بطاقة خطر 1 -->
         <div class="hazard-card bg-gray-900/80 border-l-4 border-rose-500 p-4 rounded-xl shadow-md">
             <div class="flex justify-between items-center mb-1">
-                <h4 id="riskAlertText" class="font-bold text-rose-400 text-sm">Extreme Heat & Fire Risk 🔥</h4>
-                <span id="riskBadgeText" class="text-[10px] bg-rose-950 text-rose-300 px-2 py-0.5 rounded">مراقب</span>
+                <h4 id="riskAlert1" class="font-bold text-rose-400 text-sm">Extreme Heat & Fire Risk 🔥</h4>
+                <span id="riskBadge1" class="text-[10px] bg-rose-950 text-rose-300 px-2 py-0.5 rounded">مراقب</span>
             </div>
-            <p id="riskDescText" class="text-xs text-gray-400">التخفيف من مخاطر درجات الحرارة المرتفعة والرطوبة المنخفضة بيئياً للحقول المجاورة.</p>
+            <p id="riskDesc1" class="text-xs text-gray-400">التخفيف من مخاطر درجات الحرارة المرتفعة والرطوبة المنخفضة بيئياً للحقول المجاورة.</p>
         </div>
 
         <!-- بطاقة خطر 2 -->
         <div class="hazard-card bg-gray-900/80 border-l-4 border-indigo-500 p-4 rounded-xl shadow-md">
             <div class="flex justify-between items-center mb-1">
-                <h4 class="font-bold text-indigo-400 text-sm">Flood & Excess Water Warning 🌧️</h4>
-                <span class="text-[10px] bg-indigo-950 text-indigo-300 px-2 py-0.5 rounded">آمن</span>
+                <h4 id="riskAlert2" class="font-bold text-indigo-400 text-sm">Flood & Excess Water Warning 🌧️</h4>
+                <span id="riskBadge2" class="text-[10px] bg-indigo-950 text-indigo-300 px-2 py-0.5 rounded">آمن</span>
             </div>
-            <p class="text-xs text-gray-400">تتبع الارتفاعات المفاجئة في هطول الأمطار وتراكم المياه لشبكات الصرف الزراعي.</p>
+            <p id="riskDesc2" class="text-xs text-gray-400">تتبع الارتفاعات المفاجئة في هطول الأمطار وتراكم المياه لشبكات الصرف الزراعي.</p>
         </div>
 
         <!-- بطاقة خطر 3 -->
         <div class="hazard-card bg-gray-900/80 border-l-4 border-amber-500 p-4 rounded-xl shadow-md">
             <div class="flex justify-between items-center mb-1">
-                <h4 class="font-bold text-amber-400 text-sm">Drought & Water Scarcity Alert ☀️</h4>
-                <span class="text-[10px] bg-amber-950 text-amber-300 px-2 py-0.5 rounded">تحذير مبكر</span>
+                <h4 id="riskAlert3" class="font-bold text-amber-400 text-sm">Drought & Water Scarcity Alert ☀️</h4>
+                <span id="riskBadge3" class="text-[10px] bg-amber-950 text-amber-300 px-2 py-0.5 rounded">تحذير مبكر</span>
             </div>
-            <p class="text-xs text-gray-400">تحديد فترات الجفاف الحرجة وجفاف رطوبة التربة لتوجيه أنظمة الري الذكية.</p>
+            <p id="riskDesc3" class="text-xs text-gray-400">تحديد فترات الجفاف الحرجة وجفاف رطوبة التربة لتوجيه أنظمة الري الذكية.</p>
         </div>
 
         <!-- بطاقة خطر 4 -->
         <div class="hazard-card bg-gray-900/80 border-l-4 border-yellow-500 p-4 rounded-xl shadow-md">
             <div class="flex justify-between items-center mb-1">
-                <h4 class="font-bold text-yellow-400 text-sm">High Pest & Fungal Proliferation Risk 🐛</h4>
-                <span class="text-[10px] bg-yellow-950 text-yellow-300 px-2 py-0.5 rounded">نشط</span>
+                <h4 id="riskAlert4" class="font-bold text-yellow-400 text-sm">High Pest & Fungal Proliferation Risk 🐛</h4>
+                <span id="riskBadge4" class="text-[10px] bg-yellow-950 text-yellow-300 px-2 py-0.5 rounded">نشط</span>
             </div>
-            <p class="text-xs text-gray-400">اكتشاف الظروف المناخية المثالية (حرارة 20-30°C + رطوبة >75%) لحماية المحاصيل استباقياً.</p>
+            <p id="riskDesc4" class="text-xs text-gray-400">اكتشاف الظروف المناخية المثالية (حرارة 20-30°C + رطوبة >75%) لحماية المحاصيل استباقياً.</p>
         </div>
     </section>
 
@@ -114,21 +113,18 @@
         Agro-Spectra Platform © 2026 | NASA Space Apps Challenge - جازان
     </footer>
 
-    <!-- استدعاء ملف القاموس اللغوي i18n.js -->
+    <!-- استدعاء ملف القاموس اللغوي -->
     <script src="i18n.js"></script>
 
-    <!-- سكريبت التفاعل اللحظي وتبديل اللغات -->
+    <!-- دالة التبديل -->
     <script>
-        // الحالة الافتراضية للغة
         let currentLang = 'ar';
 
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
             
-            // تحديث نص زر التبديل
             document.getElementById('langToggleBtn').innerText = currentLang === 'ar' ? '🌐 EN' : '🌐 عربي';
 
-            // تطبيق الترجمات من i18n.js بناءً على الـ IDs
             document.getElementById('teamBadgeText').innerText = translations[currentLang].teamBadge;
             document.getElementById('apiStatusText').innerText = translations[currentLang].apiConnected;
             document.getElementById('sectionGeneralState').innerText = translations[currentLang].sectionGeneralState;
@@ -146,25 +142,24 @@
             document.getElementById('ndviDesc').innerText = translations[currentLang].ndviDesc;
             
             document.getElementById('riskSystemTitle').innerText = translations[currentLang].riskSystemTitle;
-            document.getElementById('riskBadgeText').innerText = translations[currentLang].riskBadge;
-            document.getElementById('riskAlertText').innerText = translations[currentLang].riskAlert;
-            document.getElementById('riskDescText').innerText, document.getElementById('riskDescText').innerText = translations[currentLang].riskDesc;
+            
+            // تحديث بطاقات المخاطر الأربع
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById('riskBadge' + i).innerText = translations[currentLang]['riskBadge' + i];
+                document.getElementById('riskAlert' + i).innerText = translations[currentLang]['riskAlert' + i];
+                document.getElementById('riskDesc' + i).innerText = translations[currentLang]['riskDesc' + i];
+            }
 
-            // عكس اتجاه الصفحة تلقائياً (RTL للعروبي، LTR للإنكليزي)
             document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
             document.documentElement.setAttribute('lang', currentLang);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             const hazardCards = document.querySelectorAll('.hazard-card');
-
             hazardCards.forEach(card => {
                 card.addEventListener('click', function() {
                     this.style.transform = 'scale(0.97)';
-                    setTimeout(() => {
-                        this.style.transform = 'scale(1)';
-                    }, 150);
-
+                    setTimeout(() => { this.style.transform = 'scale(1)'; }, 150);
                     const title = this.querySelector('h4').innerText;
                     alert("تحليل نظام Agro-Spectra الذكي:\nتم تفعيل فحص الحساسات لـ (" + title + ") بناءً على آخر تحديث لبيانات ناسا الإحيائية.");
                 });
